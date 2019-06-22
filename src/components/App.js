@@ -1,13 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Question from './Question';
+import '../css/App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        Hey
-      </header>
+      <Question/>
     </div>
   );
 }
