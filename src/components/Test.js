@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Test extends Component{
+class Test extends React.Component{
     
     render() {
         return(

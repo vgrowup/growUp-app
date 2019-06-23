@@ -1,28 +1,24 @@
 import React from 'react';
-import Test from './Test';
+import {withRouter} from 'react-router-dom';
 
-class Login extends Component {
+class Login extends React.Component {
 
     goToTest(event) {
         event.preventDefault();
         console.log("going to test page");
         // TODO: Replace 1 with test id here
-        this.context.router.transitionTo(`/test/1`)
+        this.props.history.push('/test');
     }
 
     render() {
         return (
             <div>
-                <form>
-                    <input type="submit" value="Submit" onSubmit={ (e) => this.goToTest(e)}/>
+                <form onSubmit={ (e) => this.goToTest(e)}>
+                    <input type="submit" value="Submit" />
                 </form>
             </div>
         )
     }
 }
 
-Test.contextTypes = {
-    router : React.PropTypes.object
-}
-
-export default Login;
+export default withRouter(Login);
